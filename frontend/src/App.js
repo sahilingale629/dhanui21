@@ -29,7 +29,7 @@ function App() {
     const fetchCSV = async () => {
       try {
         // const response = await fetch("/merged_file.csv"); // Adjust path as needed
-        const response = await fetch("http://localhost:5000/merged_file.csv");
+        const response = await fetch("https://dhanui21-1.onrender.com/merged_file.csv");
 
         const csvText = await response.text();
 
@@ -112,7 +112,7 @@ function App() {
   const handleStartRTD = async () => {
     try {
       // Send a request to the backend to start RTD
-      const response = await fetch("http://localhost:5000/startRTD", {
+      const response = await fetch("https://dhanui21-1.onrender.com/startRTD", {
         method: "POST",
       });
 
@@ -144,7 +144,7 @@ function App() {
 
     try {
       // Send the file to the backend
-      const response = await fetch("http://localhost:5000/upload", {
+      const response = await fetch("https://dhanui21-1.onrender.com/upload", {
         method: "POST",
         body: formData,
       });
